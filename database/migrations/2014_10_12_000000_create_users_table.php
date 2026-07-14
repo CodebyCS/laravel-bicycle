@@ -15,12 +15,28 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+
+            //Campo que será FK
+            $table->unsignedBigInteger('country_id');
+
+            //campos modelo ER
+            $table->string('first_name');
+            $table->string('last_name');
+
+            //Obrigatorios do Auth laravel
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+
+            //Timestamps cria o created_at e o updated_at e o softDeletes cria o deleted_at
             $table->timestamps();
+            $table->softDeletes();
+
+            //Foreign Key - countries
+            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
+
+
         });
     }
 
