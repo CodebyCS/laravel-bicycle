@@ -14,5 +14,7 @@ class DatabaseSeeder extends Seeder
          $this->call(CountrySeeder::class);
 
          factory(\App\User::class, 100)->create();
+
+         factory(\App\Bicycle::class, 200)->create();
     }
 }

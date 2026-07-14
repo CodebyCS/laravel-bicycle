@@ -33,3 +33,8 @@ $factory->define(User::class, function (Faker $faker) {
         }
     ];
 });
+//A função abaixo faz com que para cada user criado, ele crie duas bicicletas a seguir
+/*$factory->afterCreating(App\User::class, function ($user, $faker) {
+    factory(App\Bicycle::class, 2)->create(['user_id' => $user->id]);
+});*/
+

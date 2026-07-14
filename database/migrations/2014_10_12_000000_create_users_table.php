@@ -17,11 +17,12 @@ class CreateUsersTable extends Migration
             $table->id();
 
             //Campo que será FK
-            $table->unsignedBigInteger('country_id');
+            $table->unsignedBigInteger('country_id')->costrained('countries');
 
             //campos modelo ER
             $table->string('first_name');
             $table->string('last_name');
+            $table->date('birth_date');
 
             //Obrigatorios do Auth laravel
             $table->string('email')->unique();
