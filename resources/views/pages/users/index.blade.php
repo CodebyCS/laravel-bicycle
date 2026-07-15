@@ -6,7 +6,7 @@
             <div class="col-md-10">
 
                 <!-- Chamada do Componente e passagem dos dados -->
-                @include('components.user-list', ['users' => $users])
+                @include('components.users.user-list', ['users' => $users])
 
             </div>
         </div>
