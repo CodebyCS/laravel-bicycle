@@ -52,8 +52,8 @@ Siga os passos abaixo para clonar e executar este projeto localmente:
 
 ### 1. Clonar o Repositório
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/CodebyCS/laravel-bicycle
+cd laravel-bicycle
 ```
 
 ### 2. Instalar as Dependências do Composer
@@ -63,9 +63,9 @@ composer install
 ```
 *Nota: Para criar este ambiente do zero, foram utilizados os comandos:*
 ```bash
-composer create-project --prefer-dist laravel/laravel:^7.0 nomedoprojeto
+composer create-project --prefer-dist laravel/laravel:^7.0 laravel-bicycle
 composer require laravel/ui:^2.4
-php artisan ui bootstrap --auth
+php artisan ui vue --auth
 ```
 
 ### 3. Configurar o Ficheiro de Ambiente (`.env`)
@@ -91,7 +91,7 @@ php artisan key:generate
 ### 5. Executar as Migrações e os Seeders
 Para criar as tabelas e povoar a base de dados com as Factories e Seeders desenvolvidos:
 ```bash
-php artisan migrate --seed
+php artisan migrate:fresh --seed
 ```
 
 ### 6. Compilar os Assets Frontend (Bootstrap)

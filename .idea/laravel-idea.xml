@@ -6,6 +6,20 @@
     </option>
   </component>
   <component name="LaravelIdeaMainSettings">
+    <option name="codeGeneration">
+      <LaravelCodeGeneration>
+        <option name="generationBooleanSettings">
+          <map>
+            <entry key="createBladeComponent:inTheNewMenu" value="true" />
+          </map>
+        </option>
+        <option name="generationStringSettings">
+          <map>
+            <entry key="createBladeComponent:classSuffix" value="" />
+          </map>
+        </option>
+      </LaravelCodeGeneration>
+    </option>
     <option name="frameworkFound" value="true" />
   </component>
 </project>
